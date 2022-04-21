@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 // import { userActions } from '../../redux/reducers/userReducer.ts';
 import tableStyles from '../common/styles/table.module.css'
 export default function  Join(){
     const [user, setUser] =useState({
         userid:'', password:'', email:'', name:'', phone:'', birth:'', address:''
     })
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
     const handleChange = e =>{
         e.preventDefault()
         const{name, value} = e.target;
@@ -17,7 +17,7 @@ export default function  Join(){
         e => {
             e.preventDefault()
             alert(' 진행 1: 회원가입 클릭 ');
-            dispatch(userActions.joinRequest(user))
+            // dispatch(userActions.joinRequest(user))
             setUser({
                 userid:'', password:'', email:'', name:'', phone:'', birth:'', address:''
             })
