@@ -1,6 +1,10 @@
-import { ActionTypes } from '@mui/base'
 import { combineReducers } from '@reduxjs/toolkit'
-import { HYDRATE } from 'next-redux-wrapper'
+import { HYDRATE } from 'next-redux-wrapper';
+import admins from './adminReducer.ts'
+import basics from './basicReducer.ts'
+import boards from './boardReducer.ts'
+import games from './gameReducer.ts'
+import todos from './todoReducer.ts'
 import users from './userReducer.ts'
 
 const rootReducer = (state:any, action:any) => {
@@ -11,11 +15,11 @@ const rootReducer = (state:any, action:any) => {
         };
       }
       return combineReducers({
-        // admins,
-        // basics,
-        // boards,
-        // games,
-        // todos,
+        admins,
+        basics,
+        boards,
+        games,
+        todos,
         users
       })(state, action)
 }
