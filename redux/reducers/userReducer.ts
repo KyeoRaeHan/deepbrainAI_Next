@@ -83,7 +83,7 @@ const userSlice = createSlice({
         logoutRequest(state: UserState, payload){
             state.loading = false; 
         },
-        logoutSuccess(state: UserState){ 
+        logoutSuccess(state: UserState){ //다 지웠다는 의미?
             state.loading = false;
             localStorage.clear()
             window.location.href = '/'

@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react' // 구조분해할당, 경량화
 import tableStyles from '../common/styles/table.module.css'
 
 export default function Profile() {
-    const [profile, setProfile] = useState({})
+    const [profile, setProfile] = useState({}) // 데이터가 json형태이므로 {}추가
     useEffect(() => {
         const loginUser = localStorage.getItem('loginUser')
         const user = JSON.parse(loginUser)

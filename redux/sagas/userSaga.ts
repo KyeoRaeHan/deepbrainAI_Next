@@ -63,6 +63,7 @@ function* logout(){
     }
 }
 export function* watchJoin(){
+    alert('sage work')
     yield takeLatest(userActions.joinRequest, join)
 }
 export function* watchLogin(){

@@ -14,7 +14,7 @@ export default function Profile({id}){
       alert('>>' +id)
       axios.get(`http://localhost:5000/api/user/profile/${id}`)
       .then(res=>{
-        setUser(res.data.user)
+        setUser(res.data)
       }).catch(err=>{
          console.log(err)
       })

@@ -22,15 +22,15 @@ export default function GetUsers(){
         </thead>
         <tbody>
               <tr>
-                  {columns.map((column, index) => (
-                        <td key={index} >{column}</td>
-                  ))}
+                  {columns.map((column, index) => {
+                        return <td key={index} >{column}</td>
+                  })}
                 </tr>
                 { data.length == 0  ?<tr >
                                       <td colSpan={6} >데이터가 없습니다</td>
                                       </tr>
-                :data.map((user) => (
-                <tr key={user.userid} >
+                : data.map((user) => {
+                  return <> <tr key={user.userid}>
                   <td >
                     <Link href={{pathname:`/user/[userid]`,
                                 query:{selectedUser: 'test'}}} as={`/user/${user.userid}`}>
@@ -42,8 +42,8 @@ export default function GetUsers(){
                   <td >{user.phone}</td>
                   <td >{user.birth}</td>
                   <td >{user.address}</td>
-                </tr>
-            ))}
+                </tr></>
+                })}
             
         </tbody>
       </table>

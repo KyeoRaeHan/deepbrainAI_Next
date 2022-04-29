@@ -55,7 +55,7 @@ export const logoutApi = async () => {
     try {
         const response: AxiosResponse<unknown, UserType[]> = await axios.get(
             `${SERVER}/user/logout`,
-            {headers}
+            {headers} // 보안정보
         )
         
     } catch (err) {
