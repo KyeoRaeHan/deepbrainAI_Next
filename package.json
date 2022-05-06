@@ -26,6 +26,7 @@
 	"dependencies": {
 		"clsx": "^1.1.1",
 		"dotenv": "^16.0.0",
+		"eslint-config-next": "^12.1.6",
 		"mongoose": "^6.3.1",
 		"next": "^9.5.3",
 		"next-redux-wrapper": "^6.0.2",
@@ -42,7 +43,7 @@
 	},
 	"devDependencies": {
 		"babel-eslint": "^10.1.0",
-		"eslint": "^7.9.0",
+		"eslint": "^8.14.0",
 		"eslint-config-react-app": "^5.2.1",
 		"eslint-plugin-flowtype": "^5.2.0",
 		"eslint-plugin-import": "^2.22.0",
